@@ -1,0 +1,17 @@
+.search-input{
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid red;
+    border-radius: 5px;
+    
+    outline: none;
+}
+
+
+.li-css{
+    list-style: none;
+    font-size: 1.1rem;
+    background-color: aqua;
+    padding: 5px;
+    margin-bottom: 2px;
+}
