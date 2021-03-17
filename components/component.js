@@ -1,21 +1,12 @@
-function Li(text,cssclass) {
+function Li(text, cssclass) {
   return `<li class="${cssclass}">${text}</li>`;
 }
 
 function DynamicTable(row, col, data) {
-  let result = `<tr>`;
-  for (let i = 0; i < col; i++) {
-    result += `<th>${data[0][i]}</th>`;
-  }
-  result += "</tr>";
+  let result = `<tr> ${data[0].map((x) => `<th>${x}</th>`).join("")}</tr>`;
 
   for (let i = 1; i < row; i++) {
-    result += "<tr>";
-    for (let i = 0; i < col; i++) {
-      result += `<td>${data[0][i]}</td>`;
-    }
-
-    result += "</tr>";
+    result += `<tr> ${data[0].map((x) => `<td>${x}</td>`).join("")}</tr>`;
   }
 
   return result;
